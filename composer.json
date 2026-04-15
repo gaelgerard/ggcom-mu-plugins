@@ -1,5 +1,5 @@
 {
-  "name": "gaelgerard/mu-plugins",
+  "name": "gaelgerard/ggcom-mu-plugins",
   "description": "Mes mu-plugins personnalisés pour WordPress",
   "type": "wordpress-muplugin",
   "license": "MIT",
