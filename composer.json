@@ -1,0 +1,15 @@
+{
+  "name": "gaelgerard/mu-plugins",
+  "description": "Mes mu-plugins personnalisés pour WordPress",
+  "type": "wordpress-muplugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Gael Gerard"
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "composer/installers": "^2.0"
+  }
+}
