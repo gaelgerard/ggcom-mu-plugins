@@ -1,5 +1,10 @@
 <?php
 /**
+ * Plugin Name: Check if visitor has Woo-Share Access
+ * Description: Vérifie que le visiteur est bien venu depuis le lien d'accès anticipé à la boutique.
+ */
+
+/**
  * Fonction utilitaire unique pour vérifier l'accès.
  * On utilise un paramètre $check_option pour éviter la boucle infinie dans le filtre.
  */
