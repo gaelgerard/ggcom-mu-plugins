@@ -1,19 +1,19 @@
 <?php
 /**
  * Plugin Name: Coming Soon Sage Redirect
- * Description: Redirige vers la page coming soon si l'accès n'est pas partagé via Woo.
+ * Description: Redirige vers la page d'accueil si l'accès n'est pas autorisé via Woo.
  */
 
-add_action('plugins_loaded', function () {
-    // 1. Vérifier si la fonction ou la classe du plugin dépendant existe
-    // Remplace 'ma_fonction_de_partage_existe' par une fonction réelle de ton premier plugin
+add_action('template_redirect', function () {
+    // 1. On vérifie si la fonction de vérification existe
+    // On s'assure aussi qu'on est sur la page boutique (is_shop)
     if (!function_exists('has_woo_share_access') || !is_shop()) {
         return; 
     }
 
-    // 2. Ton code de redirection ici
-    if (!has_woo_share_access() && is_shop()) {
-        wp_redirect( '/' );
+    // 2. Si l'utilisateur n'a pas l'accès, on redirige vers l'accueil
+    if (!has_woo_share_access()) {
+        wp_safe_redirect(home_url('/'));
         exit;
     }
-}, 11); // On met une priorité 11 pour être sûr que les plugins soient chargés
+});
